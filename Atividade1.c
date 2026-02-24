@@ -34,9 +34,7 @@ typedef struct {
 pessoa p[4]; // é Realizado a Instância da struct
 
 
-int main(){
-	setlocale(LC_ALL,"Portuguese");
-	
+void inserirDados(){
 	int i;
 	for(i=0;i<=4;i++){
 		printf("Digite o nome %dª da pessoa:\n", i+1);
@@ -52,9 +50,10 @@ int main(){
 		printf("------------------------------------\n");
 		printf("\n");
 	}
-	
-	
-	
+}
+
+void saidaDados(){
+	int i; 
 	printf("--------------------------\n");
 	printf("     EXIBINDO EM TELA:    \n");
 	printf("--------------------------\n");
@@ -63,6 +62,12 @@ int main(){
 		printf("Idade:    %d\n",p[i].idade);
 		printf("Telefone: %s",p[i].telefone);
 	}
+}
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
 	
+	inserirDados();
+	saidaDados();
 	
 }
